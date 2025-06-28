@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "regions": ["cdg1", "fra1"],
   "functions": {
     "app/api/**/*.ts": {
-      "maxDuration": 30
+      "maxDuration": 10
     }
   },
   "headers": [
@@ -76,16 +75,6 @@
     {
       "source": "/sitemap.xml",
       "destination": "/api/sitemap"
-    }
-  ],
-  "crons": [
-    {
-      "path": "/api/cron/cleanup",
-      "schedule": "0 2 * * *"
-    },
-    {
-      "path": "/api/cron/backup",
-      "schedule": "0 3 * * 0"
     }
   ]
 }
